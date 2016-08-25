@@ -72,6 +72,7 @@
                 "back_image": "http://testtmpimage.b0.upaiyun.com/201605/13/146312803163893373.jpg",//背部图片
                 "type": "1", //排版模式1为竖版,2为横板
                 "now_sale": 0.2 //年卡线上折扣
+                'card_display': 'xxxxx' //年卡缩略图
             },
             {
                 "id": "5",
@@ -164,7 +165,7 @@
     "code": true,
     "data": {
         "interface": {'略'},
-        "userId": "" 
+        "userId": ""
     }
 }
 ```
@@ -565,7 +566,7 @@
 {
     'controller':'card',
     'action':'app',
-    'option':'login', 
+    'option':'login',
     'username':'',
     'password':'',
     'timeStamp:''
@@ -577,7 +578,7 @@
 {
     'controller':'card',
     'action':'app',
-    'option':'select', 
+    'option':'select',
     'userId':'',
     'perId':'',
     'timeStamp':''
@@ -588,7 +589,7 @@
 {
     'controller':'card',
     'action':'app',
-    'option':'pass', 
+    'option':'pass',
     'userId':'',
     'perId':'',
     'timeStamp':''

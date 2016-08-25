@@ -103,7 +103,7 @@ invoice_img          | tinytext     | Not null | 默认为''             | 发�
 check_date           | int(10)      | Not null | 默认为0              | 提交审核时间
 check_status         | tinyint(3)   | Not null | 默认为0              | 审核状态 默认为0 0=>提交未审核 1=>初审核未通过 2=>初审核通过 3=>财政未通过 4=>财政通过
 money                | decimal(9,2) | Not null | 默认为''             | 发放金额
-default_grant_status | tinyint(3)   | Not null | 默认为0              | 支付宝/银行发放状态 默认为0 0 =>未发放  1 =>发放中 1=>发放成功 2/other =>发放失败
+default_grant_status | tinyint(3)   | Not null | 默认为0              | 支付宝/银行发放状态 默认为0 0 =>未发放  1 =>发放中 2=>发放成功 3/other =>发放失败
 grant_status         | tinyint(3)   | Not null | 默认为0              | 微信发放状态 默认为0 0 =>未发放 1=>发放成功 ohter => 发放失败
 grant_date           | int(10)      | Not null | 默认为0              | 发放时间
 
@@ -120,7 +120,7 @@ operate_id  | varchar(40)  | Not null | 默认为''             | 工作人员�
 user_id     | Mediumint(8) | Not null | 默认为''             | 用户id
 order_code  | varchar(40)  | Not null | 默认为''             | 操作订单号(order表中的order_code)
 id_card     | varchar(40)  | Not null | 默认为''             | 操作身份证号
-status      | tinyint(3)   | Not null | 默认为''             | 操作类型(2=>初审核未通过 3=>初审核通过 4=>财政未通过 5=>财政通过 6=>发放成功 7=>发放失败 8=>发放中)
+status      | tinyint(3)   | Not null | 默认为''             | 操作类型(1=>初审核未通过 2=>初审核通过 3=>财政未通过 4=>财政通过 6=>发放成功 7=>发放失败 8=>发放中)
 log         | text         | Not null | 默认为''             | 操作内容(红包个数/原因)
 desc        | text         | Not null | 默认为''             | 操作细节(建议总额/详情)
 dateline    | int(10)      | Not null | 默认为''             | 时间
