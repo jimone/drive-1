@@ -11,7 +11,7 @@ public function SetPeizt ()   // 传入openid prize_id 获奖数量（红包金�
 参数：
 array(
   'openid' =>
-  'prize_id' => 
-  'num' => 
+  'prize_id' =>
+  'num' =>
 )
 ```

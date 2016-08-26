@@ -7,7 +7,7 @@
 controller | 控制器 | flop
 action | 行为 | activity
 option | 执行 | getLotteryDetail
-activityId | 活动id | 例：'1' 
+activityId | 活动id | 例：'1'
 
 data返回 | 含义
 ---|---
