@@ -30,6 +30,7 @@ money         | decimal(9,2) | Not null | 默认为''             | 单个红包
 money_num     | int(10)      | Not null | 默认为''             | 单次获取红包最大数量
 money_total   | decimal(9,2) | Not null | 默认为''             | 个人红包获取总额 0 为无限
 delete        | tinyint(3)   | Not null | 默认为''             | 是否回收 默认0 ，0正常 1 回收
+lottery_id    | Mediumint(8) | Not null | 默认为''             | 抽奖活动id
 start_date    | int(10)      | Not null | 默认为''             | 活动开始时间
 end_date      | int(10)      | Not null | 默认为''             | 活动结束时间
 dateline      | int(10)      | Not null | 默认为''             | 创建时间
@@ -103,8 +104,9 @@ invoice_img          | tinytext     | Not null | 默认为''             | 发�
 check_date           | int(10)      | Not null | 默认为0              | 提交审核时间
 check_status         | tinyint(3)   | Not null | 默认为0              | 审核状态 默认为0 0=>提交未审核 1=>初审核未通过 2=>初审核通过 3=>财政未通过 4=>财政通过
 money                | decimal(9,2) | Not null | 默认为''             | 发放金额
-default_grant_status | tinyint(3)   | Not null | 默认为0              | 支付宝/银行发放状态 默认为0 0 =>未发放  1 =>发放中 2=>发放成功 3/other =>发放失败
-grant_status         | tinyint(3)   | Not null | 默认为0              | 微信发放状态 默认为0 0 =>未发放 1=>发放成功 ohter => 发放失败
+default_grant_status | tinyint(3)   | Not null | 默认为0              | 支付宝/银行发放状态 默认为0 0 =>未发放 1 =>发放中 2=>发放成功 3/other =>发放失败
+grant_status         | tinyint(3)   | Not null | 默认为0              | 微信发放状态 默认为0 0 =>未发放 1=>发放成功 3=> 发放失败
+grant_back_status    | varchar(40)  | Not null | 默认为0              | 微信返回状态码
 grant_date           | int(10)      | Not null | 默认为0              | 发放时间
 
 --------------------------------------------------------------------------------
@@ -112,7 +114,7 @@ grant_date           | int(10)      | Not null | 默认为0              | 发�
 ## 操作记录表 (db_sqpaper_operate_log)
 
 列名          | 数据类型         | 是否为空     | 约束条件              | 列名说明
-:---------- | :----------- | :------- | :---------------- | :--------------------------------------------------------
+:---------- | :----------- | :------- | :---------------- | :---------------------------------------------------------------
 id          | Smallint(5)  | Not null | AUTO_INCREMENT pk | 编号
 member_id   | Mediumint(8) | Not null | 默认为''             | 所属企业编号
 activity_id | Mediumint(8) | Not null | 默认为''             | 活动id
@@ -135,9 +137,9 @@ id          | Smallint(5)  | Not null | AUTO_INCREMENT pk | 编号
 member_id   | Mediumint(8) | Not null | 默认为''             | 所属企业编号
 activity_id | Mediumint(8) | Not null | 默认为''             | 活动id
 user_id     | Mediumint(8) | Not null | 默认为''             | 用户id
-id_card     | Mediumint(8) | Not null | 默认为''             | 用户身份证
+id_card     | varchar(40)  | Not null | 默认为''             | 用户身份证
 pay_way     | tinyint(3)   | Not null | 默认为''             | 支付方式(0=>微信红包 1=>支付宝账号 2=>银行转账)
 money       | decimal(9,2) | Not null | 默认为''             | 发放金额
-account     | decimal(9,2) | Not null | 默认为''             | 发放账号(微信openid 支付宝账号+昵称 银行转账 相应信息 )
-operate_id  | Mediumint(8) | Not null | 默认为''             | 发放操作员id(operate_log表中的operate_id)
+account     | tinytext     | Not null | 默认为''             | 发放账号(微信openid 支付宝账号+昵称 银行转账 相应信息 )
+operate_id  | varchar(40)  | Not null | 默认为''             | 发放操作员id(operate_log表中的operate_id)
 dateline    | int(10)      | Not null | 默认为''             | 操作时间
