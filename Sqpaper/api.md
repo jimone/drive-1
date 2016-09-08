@@ -24,7 +24,7 @@ message | String  | 执行结果消息
 
 - **返回示例**
 
-```json
+```javascript
 {
     "msg": "xxx",
     "code": true,
