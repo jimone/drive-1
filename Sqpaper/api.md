@@ -26,9 +26,9 @@ message | String  | 执行结果消息
 
 ```javascript
 {
-    "msg": "xxx",
-    "code": true,
-    "data": {    //用户信息
+    msg: "xxx",
+    code: true,
+    data: {    //用户信息
         "id": "1",
         "member_id": "4",
         "nickname": "",
