@@ -54,7 +54,7 @@ office         | varchar(60)  | Not null | 默认为''             | 签证机�
 openid         | tinytext     | Not null | 默认为''             | openid
 mobile         | char(20)     | Not null | 默认为''             | 手机号码
 head_img       | tinytext     | Not null | 默认为''             | 头像
-grant_way      | tinyint(3)   | Not null | 默认为''             | 发放方式(0=>微信红包,1=>支付宝账号,2=>银行转账)
+grant_way      | tinyint(3)   | Not null | 默认为''             | 发放方式(-1=>用户未填写过相关信息，0=>微信红包,1=>支付宝账号,2=>银行转账)
 alipay_account | varchar(40)  | Not null | 默认为''             | 支付宝账号
 alipay_name    | varchar(40)  | Not null | 默认为''             | 支付宝昵称
 bank_account   | varchar(40)  | Not null | 默认为''             | 银行账号

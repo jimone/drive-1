@@ -46,6 +46,7 @@ oauthToken | 授权   | 略
     "code": true,
     "data": {  
           //用户详细信息
+        'grant_way': '-1=>用户未填写过相关信息，0=>微信红包,1=>支付宝账号,2=>银行转账'
     }
 }
 ```
@@ -105,18 +106,18 @@ oauthToken | 授权   | 略
 
 请求参数(*必须)         | 参数说明                 | 参考值
 :---------------- | :------------------- | :---------------------
+*activity_id      | 活动id                |   url获取
 *enter_ids        | 用户选择入园记录id(array)    | [1,4]
 *hotel_title       | 酒店名称                 | 用户输入
 *hotel_enter_date  | 酒店入住时间               | 用户输入
 *hotel_left_date   | 酒店离开时间               | 用户输入
 *hotel_amount      | 酒店房间数                | 用户输入
-*hotel_number      | 酒店房间号                | 用户输入
 *hotel_person      | 入住人数                 | 用户输入
 *invoice_code      | 发票 凭证单号              | 用户输入
 *invoice_img       | 发票 凭证图片              | 用户输入
 *oauthToken        | 授权                   | 略
 ----------------- | -------------------- | ------------
-*grant_way         | 发放方式                 | 0=>微信,1=>支付宝账号,2=>银行转账
+*grant_way         | 发放方式                 | -1=>用户未填写过相关信息，0=>微信红包,1=>支付宝账号,2=>银行转账
 alipay_account    | 支付宝账号                | 用户输入
 alipay_name       | 支付宝昵称                | 用户输入
 bank_account      | 银行账号                 | 用户输入
@@ -130,6 +131,6 @@ bank_title        | 开户行                  | 用户输入
 {
     "msg": "获取成功",
     "code": true,
-    "data": 
+    "data":
 }
 ```
