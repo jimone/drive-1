@@ -134,3 +134,49 @@ bank_title        | 开户行                  | 用户输入
     "data": "14"
 }
 ```
+
+## 当前用户订单列表
+
+- **请求URL(controller/action/option)**
+
+  > [sqpaper/order/getList](#)
+
+- **请求参数**
+
+请求参数         | 参数说明                 | 参考值
+:---------------- | :------------------- | :---------------------
+activity_id      | 活动id                |   url获取
+oauthToken        | 授权                   | 略
+
+
+- **返回示例**
+
+```javascript
+{
+    "msg": "获取成功",
+    "code": true,
+    "data": {
+        "2": {
+            "id": "2",
+            "member_id": "4",
+            "user_id": "1",
+            ...           //order相关信息
+            "enterList": [
+                {
+                    "id": "3",
+                    "member_id": "4",
+                    "id_card": "350733211585445425",
+                    ...   //enter相关信息
+                },
+                {
+                    ...
+                }
+            ]
+        },
+        "3": {
+            ...
+        },
+        ...
+    }
+}
+```
