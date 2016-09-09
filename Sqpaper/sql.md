@@ -11,8 +11,8 @@ member_id    | Mediumint(8) | Not null | 默认为''             | 所属企业�
 code         | tinytext     | Not null | 默认为''             | 设备码
 desc         | tinytext     | Not null | 默认为''             | 设备描述
 count        | int(10)      | Not null | 默认为''             | 使用频数
-spot_id      | Mediumint(8) | Not null | 默认为''             | 景点编号(对应商圈)
-spot_name    | varchar(40)  | Not null | 默认为''             | 景点名(对应商圈)
+spot_id      | Mediumint(8) | Not null | 默认为''             | 景点编号(对应商圈中的店铺)
+spot_name    | varchar(40)  | Not null | 默认为''             | 景点名(对应商圈中的店铺)
 operate_date | int(10)      | Not null | 默认为''             | 最后操作时间
 dateline     | int(10)      | Not null | 默认为''             | 添加时间
 
@@ -74,7 +74,7 @@ id          | Smallint(5)  | Not null | AUTO_INCREMENT pk | 编号
 member_id   | Mediumint(8) | Not null | 默认为''             | 所属企业编号
 activity_id | Mediumint(8) | Not null | 默认为''             | 活动id
 id_card     | varchar(40)  | Not null | 默认为''             | 身份证
-spot_id     | Mediumint(8) | Not null | 默认为''             | 景点编号(对应商圈)
+shop_id     | Mediumint(8) | Not null | 默认为''             | 景点编号(对应商圈 店铺id)
 device_id   | varchar(40)  | Not null | 默认为''             | 扫描设备id
 amount      | int(10)      | Not null | 默认为''             | 票数量
 is_use      | int(10)      | Not null | 默认为''             | 是否使用(0=>未使用 1=>使用中 2=>成功使用 3=>使用失败)
