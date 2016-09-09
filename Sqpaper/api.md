@@ -107,7 +107,7 @@ oauthToken | 授权   | 略
 请求参数(*必须)         | 参数说明                 | 参考值
 :---------------- | :------------------- | :---------------------
 *activity_id      | 活动id                |   url获取
-*enter_ids        | 用户选择入园记录id(array)    | [1,4]
+*enter_ids        | 用户选择入园记录id(array)    | '1,4' enter_id 通过逗号分隔
 *hotel_title       | 酒店名称                 | 用户输入
 *hotel_enter_date  | 酒店入住时间               | 用户输入
 *hotel_left_date   | 酒店离开时间               | 用户输入
@@ -129,8 +129,8 @@ bank_title        | 开户行                  | 用户输入
 
 ```javascript
 {
-    "msg": "获取成功",
+    "msg": "提交成功",
     "code": true,
-    "data":
+    "data": "14"
 }
 ```
