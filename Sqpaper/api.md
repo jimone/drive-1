@@ -58,6 +58,7 @@ oauthToken  | 授权   | 略
 - **请求URL(controller/action/option)**
 
   > [sqpaper/enter/getList](#)
+    注 用户-> member_id->merchant表 拿到商户id -> 商户 找到所有 设备 —> device_id
 
 - **请求参数**
 
