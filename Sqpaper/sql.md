@@ -110,6 +110,7 @@ grant_status         | tinyint(3)   | Not null | 默认为0              | 微�
 grant_back_status    | varchar(40)  | Not null | 默认为0              | 微信返回状态码
 grant_date           | int(10)      | Not null | 默认为0              | 发放时间
 grant_way            | tinyint(3)   | Not null | 默认为0              | 发放方式(0=>微信红包,1=>支付宝账号,2=>银行转账)
+user_config          | text         | Not null | 默认为0              | 入住人信息(序列化)
 
 --------------------------------------------------------------------------------
 

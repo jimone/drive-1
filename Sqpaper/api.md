@@ -57,8 +57,7 @@ oauthToken  | 授权   | 略
 
 - **请求URL(controller/action/option)**
 
-  > [sqpaper/enter/getList](#)
-    注 用户-> member_id->merchant表 拿到商户id -> 商户 找到所有 设备 —> device_id
+  > [sqpaper/enter/getList](#) 注 用户-> member_id->merchant表 拿到商户id -> 商户 找到所有 设备 --> device_id
 
 - **请求参数**
 
@@ -110,15 +109,17 @@ oauthToken | 授权   | 略
 :---------------- | :------------------- | :--------------------------------------
 *activity_id      | 活动id                 | url获取
 *enter_ids        | 用户选择入园记录id(array)    | '1,4' enter_id 通过逗号分隔
-*hotel_title      | 酒店名称                 | 用户输入
+*hotel_title      | 酒店名称                   | 用户输入
 *hotel_enter_date | 酒店入住时间               | 用户输入
 *hotel_left_date  | 酒店离开时间               | 用户输入
-*hotel_amount     | 酒店房间数                | 用户输入
-*hotel_person     | 入住人数                 | 用户输入
+*hotel_amount     | 酒店房间数                 | 用户输入
+*hotel_person     | 入住人数                   | 用户输入
 *invoice_code     | 发票 凭证单号              | 用户输入
 *invoice_img      | 发票 凭证图片              | 用户输入
-*oauthToken       | 授权                   | 略
------------------ | -------------------- | ------------
+*oauthToken       | 授权                     | 略
+*user_name        | 入住人姓名                 | '张三,李四,王五'
+*user_card        | 入住人身份证               | '35023232，23432434，234234234'
+----------------- | --------------------      | ------------
 *grant_way        | 发放方式                 | -1=>用户未填写过相关信息，0=>微信红包,1=>支付宝账号,2=>银行转账
 alipay_account    | 支付宝账号                | 用户输入
 alipay_name       | 支付宝昵称                | 用户输入
