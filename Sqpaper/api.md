@@ -175,18 +175,20 @@ oauthToken  | 授权   | 略
                 }
             ]
             ...
-            "user_config": {
-               "user_name": [
-                   "张三",
-                   "李四",
-                   "王五"
-               ],
-               "user_card": [
-                   "35023232",
-                   "23432434",
-                   "234234234"
-               ]
-           },
+            "user_config": [
+              {
+                  "user_name": "张三",
+                  "user_card": "35023232"
+              },
+              {
+                  "user_name": "李四",
+                  "user_card": "23432434"
+              },
+              {
+                  "user_name": "王五",
+                  "user_card": "234234234"
+              }
+          ],
         },
         "3": {
             ...
